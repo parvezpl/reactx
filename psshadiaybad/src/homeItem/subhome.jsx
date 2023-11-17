@@ -1,28 +1,22 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+import Photos from './homeComp/photos';
 
 function Subhome({homepagetoggle}) {
-    console.log(homepagetoggle);
     return (
         <>
-            <div className={`inline-table flex-col  h- w-full ${!homepagetoggle && "hidden"} `} >
-                <div className='flex flex-col border m-2 h-[20rem] w-[98%] overflow-auto items-baseline '>
-                    <img src="src\assets\p2.jpeg" alt="thana pic" className='' />
+            <div className={` flex flex-col justify-end  w-full ${!homepagetoggle && "hidden"} `} >
+                <div className='flex justify-end'>
+                    <div className='border w-40 my-2 bg-gray-500 resize'> hello Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur temporibus quasi neque omnis expedita soluta praesentium deleniti eaque non similique! Asperiores aut tempore quos hic! Voluptates neque doloremque libero accusantium!</div>
+                    <div className='flex border m-2 w-[78%] '>
+                        <img src="src\assets\p2.jpeg" alt="thana pic" className=' object-cover h-[20rem] w-full' />
+                    </div>
                 </div>
-                    <p className=' bg-lime-600 text-white h-6'>फोटो का डिटेल यहा पर दिखाया जायेगा । </p>
-                    <div className='grid grid-cols-4 bg-zinc-400 gap-4 w-full'>
-                        <div className='h-20 bg-gray-800'>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>4</div>
-                        <div>4</div>
-                        <div>4</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>8</div>
-                        <div>8</div>
-                        <div>8</div>
+                    <p className=' bg-teal-800 text-white h-6'>फोटो का डिटेल यहा पर दिखाया जायेगा । </p>
+                    <div className='bg-zinc-400 gap-4 w-full'>
+                        <NavLink to={"/photos"}><div className=' bg-gray-500 cursor-pointer hover:bg-blue-400'>PHOTOS</div></NavLink>
+                        <Photos/>
+
                     </div>
             </div>
         </>

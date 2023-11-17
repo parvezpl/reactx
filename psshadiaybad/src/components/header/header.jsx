@@ -24,7 +24,8 @@ function Header() {
                     <div className=''>PS SHADIYABAD DIST-GHAZIPUR</div>
                     <div >
                         <div className={`flex flex-col sm:flex-row gap-2 top-1 text-sm sm:text-base text-white px-1 ${btnStatus && "hidden"}`}>
-                            <NavLink to={"/login"} className='bg-green-600 cursor-pointer border px-1 rounded-md hover:bg-green-700' onClick={()=>dispatch(homepageFn(true))}>SIGN IN</NavLink>
+                            <NavLink to={"/upload"} className='bg-green-600 cursor-pointer border px-1 rounded-md hover:bg-green-700' onClick={()=>dispatch(homepageFn(true))}>Upload Photo</NavLink>
+                            <NavLink to={"/login"} className='bg-red-600 cursor-pointer border px-1 rounded-md hover:bg-green-700' onClick={()=>dispatch(homepageFn(true))}>SIGN IN</NavLink>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
-import conf  from "../conf/conf";
 import { Client, Account, ID } from 'appwrite';
+import conf from './../conf/conf';
 
 
 export class AuthService{
@@ -29,7 +29,7 @@ export class AuthService{
         }
     }
 
-     async login({email, password}){
+    async login({email, password}){
         console.log(email, password);
         try {
             const  data = await this.account.createEmailSession(email, password);

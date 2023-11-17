@@ -25,7 +25,7 @@ function Apptes() {
         }
 
         const siup=async ({email, password, name}) => {
-           return await account.create(ID.unique(),email, password, name )
+            return await account.create(ID.unique(),email, password, name )
         }
     
     const loginbtn =()=>{
